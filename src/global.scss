@@ -1,0 +1,135 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+.encabezado {
+    background-image: url(./assets/metro_background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 90%;
+}
+  
+.subtitulo_login {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+    background-color: rgb(203, 29, 40);
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.inputs {
+    padding: 30px 35px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, rgba(225,224,220,1) 69%, rgba(255,255,255,1) 100%);
+}
+
+:root {
+    --ion-color-red: #ec1d25;
+    --ion-color-amarillo: #f7941d;
+    --ion-color-cafe: #994807;
+    --ion-color-azul: #2e3192;
+    --ion-color-celeste: #05adf4;
+    --ion-color-verde: #0b9444;
+    --ion-color-morado: #a35db5;
+    --ion-color-plomo: linear-gradient(180deg, rgba(225,224,220,1) 69%);
+
+    
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-rose-shade: #e0b4ba;
+}
+
+ion-toolbar {
+    --background: rgb(203, 29, 40);
+    --color: white;
+}
+
+ion-icon {
+    color: white;
+}
+
+.ion-color-plomo {
+    --ion-color-base: var(--ion-color-plomo);
+}
+  
+.ion-color-rojo {
+    --ion-color-base: var(--ion-color-red);
+
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-shade: var(--ion-color-rose-shade);
+}
+
+.ion-color-amarillo {
+    --ion-color-base: var(--ion-color-amarillo);
+
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-shade: var(--ion-color-rose-shade);
+}
+
+.ion-color-cafe {
+    --ion-color-base: var(--ion-color-cafe);
+
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-shade: var(--ion-color-rose-shade);
+}
+
+.ion-color-azul {
+    --ion-color-base: var(--ion-color-azul);
+
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-shade: var(--ion-color-rose-shade);
+}
+
+.ion-color-celeste {
+    --ion-color-base: var(--ion-color-celeste);
+
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-shade: var(--ion-color-rose-shade);
+}
+
+.ion-color-verde {
+    --ion-color-base: var(--ion-color-verde);
+
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-shade: var(--ion-color-rose-shade);
+}
+
+.ion-color-morado {
+    --ion-color-base: var(--ion-color-morado);
+
+    /* NO BORRAR AL COPADRE SHADE*/
+    --ion-color-shade: var(--ion-color-rose-shade);
+}
+  
+div[slot='content'] {
+    background: rgba(var(--ion-color-rose-rgb), 0.25);
+}

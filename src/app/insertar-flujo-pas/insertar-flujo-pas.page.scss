@@ -1,0 +1,41 @@
+.header {
+    background-color: rgb(203, 29, 40);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu a p {
+    color: gray;
+    align-items: center;
+}
+
+.textLogin {
+    font-family: "GothamMedium", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    flex-direction: column;
+    font-size: 25px;
+    align-self: center;
+}
+
+.btn_ingresar {
+    --background: rgba(222, 36, 49, .9);
+    --color: white;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    width: 100%;
+}
+
+.btn_recuperar {
+    width: 100%;
+    text-decoration: underline;
+    color: dimgrey;
+}

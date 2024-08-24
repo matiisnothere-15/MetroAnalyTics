@@ -1,0 +1,114 @@
+<!-- barra inicio -->
+<ion-header>
+  <ion-toolbar>
+    <div class="header_login">
+      <img src="https://www.metro.cl/images/logo-2022.png?v=2022031801" alt="">
+      <ion-buttons slot="start">
+        <ion-button fill="clear" (click)="volverAtras()"><ion-icon style="width: 50px; height: 30px; color: white;"
+            name="arrow-back-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<!-- contenido -->
+<ion-content class="ion-padding">
+  <div style="padding: 30px 0;">
+  <!-- líneas del metro -->
+  <ion-accordion-group>
+    <div class="lineas">
+        <div class="container_subtitulo">
+          <h2 class="subtitulo_informes">⚪ Informes de estaciones de origen</h2>
+        </div>
+        <div class="container_button">
+          <ion-icon name="add-outline" color="dark" size="large" (click)="irInsertarEstorigen()"></ion-icon>
+          <ion-icon name="pencil" color="dark" size="large"></ion-icon>
+        </div>
+      <ion-accordion value="first" class="bordesRedondos">  
+        <ion-item id="l1" slot="header" color="rojo">
+          <ion-label color="light"><strong class="nombreLinea">L1</strong></ion-label>
+        </ion-item>
+        <div slot="content">
+          <p style="text-align: center;">Distribucion de pasajeros por estación de origen</p>
+          <div style="padding: 5px;">
+            <canvas #chartEstacionesOrigenL1>{{ chartGraficoEstacionesOrigenL1 }}</canvas>
+          </div>
+          <ion-button color="rojo" class="ubicacionBoton" (click)="generarInformeEstacionesOrigenL1()"><strong>Generar informe PDF</strong></ion-button>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="segundo" class="bordesRedondos">  
+        <ion-item id="l1" slot="header" color="amarillo">
+          <ion-label color="light"><strong class="nombreLinea">L2</strong></ion-label>
+        </ion-item>
+        <div slot="content">
+          <p style="text-align: center;">Distribucion de pasajeros por estación de origen</p>
+          <div style="padding: 5px;">
+            <canvas #chartEstacionesOrigenL2>{{ chartGraficoEstacionesOrigenL2 }}</canvas>
+          </div>
+          <ion-button color="amarillo" class="ubicacionBoton" (click)="generarInformeEstacionesOrigenL2()"><strong>Generar informe PDF</strong></ion-button>
+        </div>
+    </ion-accordion>
+    <ion-accordion value="tercero" class="bordesRedondos">
+      <ion-item slot="header" color="cafe">
+        <ion-label color="light"><strong class="nombreLinea">L3</strong></ion-label>
+      </ion-item>
+      <div slot="content">
+        <p style="text-align: center;">Distribucion de pasajeros por estación de origen</p>
+        <div style="padding: 5px;">
+          <canvas #chartEstacionesOrigenL3>{{ chartGraficoEstacionesOrigenL3 }}</canvas>
+        </div>
+        <ion-button color="cafe" class="ubicacionBoton" (click)="generarInformeEstacionesOrigenL3()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="cuarto" class="bordesRedondos">
+      <ion-item slot="header" color="azul">
+        <ion-label color="light"><strong class="nombreLinea">L4</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribucion de pasajeros por estación de origen</p>
+        <div style="padding: 5px;">
+          <canvas #chartEstacionesOrigenL4>{{ chartGraficoEstacionesOrigenL4 }}</canvas>
+        </div>
+        <ion-button color="azul" class="ubicacionBoton" (click)="generarInformeEstacionesOrigenL4()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="cuartoA" class="bordesRedondos">
+      <ion-item slot="header" color="celeste">
+        <ion-label color="light"><strong class="nombreLinea">L4A</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribucion de pasajeros por estación de origen</p>
+        <div style="padding: 5px;">
+          <canvas #chartEstacionesOrigenL4A>{{ chartGraficoEstacionesOrigenL4A }}</canvas>
+        </div>
+        <ion-button color="celeste" class="ubicacionBoton" (click)="generarInformeEstacionesOrigenL4A()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>  
+    <ion-accordion value="quinto" class="bordesRedondos">
+      <ion-item slot="header" color="verde">
+        <ion-label color="light"><strong class="nombreLinea">L5</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribucion de pasajeros por estación de origen</p>
+        <div style="padding: 5px;">
+          <canvas #chartEstacionesOrigenL5>{{ chartGraficoEstacionesOrigenL5 }}</canvas>
+        </div>
+        <ion-button color="verde" class="ubicacionBoton" (click)="generarInformeEstacionesOrigenL5()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>      
+    <ion-accordion value="sexto" class="bordesRedondos">
+      <ion-item slot="header" color="morado">
+        <ion-label color="light"><strong class="nombreLinea">L6</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribucion de pasajeros por estación de origen</p>
+        <div style="padding: 5px;">
+          <canvas #chartEstacionesOrigenL6>{{ chartGraficoEstacionesOrigenL6 }}</canvas>
+        </div>
+        <ion-button color="morado" class="ubicacionBoton" (click)="generarInformeEstacionesOrigenL6()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>  
+    </div>
+  </ion-accordion-group>    
+  </div>
+</ion-content>

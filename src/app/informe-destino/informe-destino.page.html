@@ -1,0 +1,42 @@
+<!-- barra inicio -->
+<ion-header>
+  <ion-toolbar>
+    <div class="header_login">
+      <img src="https://www.metro.cl/images/logo-2022.png?v=2022031801" alt="">
+      <ion-buttons slot="start">
+        <ion-button fill="clear" (click)="volverAtras()"><ion-icon style="width: 50px; height: 30px; color: white;"
+            name="arrow-back-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<!-- contenido -->
+<ion-content class="ion-padding">
+  <div style="padding: 40% 0;">
+    <div style="padding: 30px 0;">
+      <!-- Gráfico de combinación entre buses  -->
+      <div class="container_subtitulo">
+        <h2 class="subtitulo_login">⚪ Distribución de pasajeros segun recorrido</h2>
+      </div>
+      <div class="container_button">
+        <ion-icon name="add-outline" color="dark" size="large" (click)="irInsertarEstdestino()"></ion-icon>
+        <ion-icon name="pencil" color="dark" size="large"></ion-icon>
+      </div>
+      <ion-card color="light" style="margin: 0;">
+        <ion-card-header>
+          <ion-card-title></ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div>
+            <canvas #chartBuses>{{ chartGraficoBuses }}</canvas>
+            <br>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <ion-button color="rojo" class="ubicacionBoton" (click)="generarInformeBuses()">Generar informe PDF</ion-button>
+    </div>
+  </div>
+</ion-content>

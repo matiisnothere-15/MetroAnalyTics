@@ -1,0 +1,113 @@
+<!-- barra inicio -->
+<ion-header>
+  <ion-toolbar>
+    <div class="header_login">
+      <img src="https://www.metro.cl/images/logo-2022.png?v=2022031801" alt="">
+      <ion-buttons slot="start">
+        <ion-button (click)="volverAtras()" fill="clear"><ion-icon style="width: 50px; height: 30px; color: white;"
+            name="arrow-back-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<!-- contenido -->
+<ion-content class="ion-padding">
+  <div style="padding: 30px 0;">
+  <!-- líneas del metro -->
+  <ion-accordion-group>
+    <div class="lineas">
+        <div class="container_subtitulo">
+          <h2 class="subtitulo_login">⚪ Informes del flujo de pasajeros</h2>
+        </div>
+        <div class="container_button">
+          <ion-icon name="add-outline" color="dark" size="large" (click)="irInsertarFlujoPas()"></ion-icon>
+          <ion-icon name="pencil" color="dark" size="large" (click)="irEliminarFlujoPas()"></ion-icon>
+        </div>
+      <ion-accordion value="first" class="bordesRedondos">  
+        <ion-item id="l1" slot="header" color="rojo">
+          <ion-label color="light"><strong class="nombreLinea">L1</strong></ion-label>
+        </ion-item>
+        <div slot="content">
+          <p style="text-align: center;">Distribución de pasajeros por estación</p>
+          <div style="padding: 5px;">
+            <canvas #chartL1>{{ chartL1grafico }}</canvas>
+          </div>
+          <ion-button color="rojo" class="ubicacionBoton" (click)="generarInformeFlujoPasL1()"><strong>Generar informe PDF</strong></ion-button>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="segundo" class="bordesRedondos">  
+        <ion-item id="l1" slot="header" color="amarillo">
+          <ion-label color="light"><strong class="nombreLinea">L2</strong></ion-label>
+        </ion-item>
+        <div slot="content">
+          <p style="text-align: center;">Distribución de pasajeros por estación</p>
+          <div style="padding: 5px;">
+            <canvas #chartL2>{{ chartL2grafico }}</canvas>
+          </div>
+          <ion-button color="amarillo" class="ubicacionBoton" (click)="generarInformeFlujoPasL2()"><strong>Generar informe PDF</strong></ion-button>
+        </div>
+    </ion-accordion>
+    <ion-accordion value="tercero" class="bordesRedondos">
+      <ion-item slot="header" color="cafe">
+        <ion-label color="light"><strong class="nombreLinea">L3</strong></ion-label>
+      </ion-item>
+      <div slot="content">
+        <p style="text-align: center;">Distribución de pasajeros por estación</p>
+        <div style="padding: 5px;">
+          <canvas #chartL3>{{ chartL3grafico }}</canvas>
+        </div>
+        <ion-button color="cafe" class="ubicacionBoton" (click)="generarInformeFlujoPasL3()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="cuarto" class="bordesRedondos">
+      <ion-item slot="header" color="azul">
+        <ion-label color="light"><strong class="nombreLinea">L4</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribución de pasajeros por estación</p>
+        <div style="padding: 5px;">
+          <canvas #chartL4>{{ chartL4grafico }}</canvas>
+        </div>
+        <ion-button color="azul" class="ubicacionBoton" (click)="generarInformeFlujoPasL4()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="cuartoA" class="bordesRedondos">
+      <ion-item slot="header" color="celeste">
+        <ion-label color="light"><strong class="nombreLinea">L4A</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribución de pasajeros por estación</p>
+        <div style="padding: 5px;">
+          <canvas #chartL4A>{{ chartL4Agrafico }}</canvas>
+        </div>
+        <ion-button color="celeste" class="ubicacionBoton" (click)="generarInformeFlujoPasL4A()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>  
+    <ion-accordion value="quinto" class="bordesRedondos">
+      <ion-item slot="header" color="verde">
+        <ion-label color="light"><strong class="nombreLinea">L5</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribución de pasajeros por estación</p>
+        <div style="padding: 5px;">
+          <canvas #chartL5>{{ chartL5grafico }}</canvas>
+        </div>
+        <ion-button color="verde" class="ubicacionBoton" (click)="generarInformeFlujoPasL5()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>      
+    <ion-accordion value="sexto" class="bordesRedondos">
+      <ion-item slot="header" color="morado">
+        <ion-label color="light"><strong class="nombreLinea">L6</strong></ion-label>
+      </ion-item>  
+      <div slot="content">
+        <p style="text-align: center;">Distribución de pasajeros por estación</p>
+        <div style="padding: 5px;">
+          <canvas #chartL6>{{ chartL6grafico }}</canvas>
+        </div>
+        <ion-button color="morado" class="ubicacionBoton" (click)="generarInformeFlujoPasL6()"><strong>Generar informe PDF</strong></ion-button>
+      </div>
+    </ion-accordion>  
+    </div>
+  </ion-accordion-group>    
+  </div>
+</ion-content>

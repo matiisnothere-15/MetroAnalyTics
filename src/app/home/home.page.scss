@@ -1,0 +1,196 @@
+.header_login {
+  background-color: rgb(203, 29, 40);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container_subtitulo {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 15px 0;
+}
+
+.menu {
+  padding: 15px 0;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-direction: column;
+}
+
+ion-icon {
+  color: rgb(203, 29, 40);
+}
+
+.loguot {
+  height: 40px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* Estilos de las lineas y estaciones del metro */
+.lineas {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.estadoL1 li {
+  background: url(https://www.metro.cl/images/estadoL1.png) left top no-repeat transparent;
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+
+.estadoL2 li {
+  background: url(https://www.metro.cl/images/estadoL2.png) left top no-repeat transparent;
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+
+.estadoL3 li {
+  background: url(https://www.metro.cl/images/estadoL3.png) left top no-repeat transparent;
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+
+.estadoL4 li {
+  background: url(https://www.metro.cl/images/estadoL4.png) left top no-repeat transparent;
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+
+.estadoL4a li {
+  background: url(https://www.metro.cl/images/estadoL4a.png) left top no-repeat transparent;
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+
+.estadoL5 li {
+  background: url(https://www.metro.cl/images/estadoL5.png) left top no-repeat transparent;
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+
+.estadoL6 li {
+  background: url(https://www.metro.cl/images/estadoL6.png) left top no-repeat transparent;
+  list-style: none;
+  position: relative;
+  left: 0;
+}
+
+/* =========Estado de las estaciones========= */
+
+/* Simbología de los estados */
+.estadoL0 {
+  list-style: none;
+  margin: 0;
+  padding-left: 0px;
+  font-size: 12px;
+}
+
+.estadoL0 .estado1 {
+  padding-left: 30px;
+  padding-bottom: 5px;
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  background: url(https://www.metro.cl/images/estadoL0.png) left top no-repeat transparent;
+}
+
+.estadoL0 .estado2 {
+  padding-left: 30px;
+  padding-bottom: 5px;
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  background: url(https://www.metro.cl/images/estadoL0_2.png) left top no-repeat transparent;
+}
+
+.estadoL0 .estado3 {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  background: url(https://www.metro.cl/images/estadoL0_4.png) left top no-repeat transparent;
+}
+
+/* Estación disponible */
+li {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+/* Estación cerrada temporalmente */
+.estadoL1 .estado2 { 
+  background: url(https://www.metro.cl/images/estadoL1_2.png) left top no-repeat transparent;
+}
+
+.estadoL2 .estado2 {
+  background: url(https://www.metro.cl/images/estadoL2_2.png) left top no-repeat transparent;
+}
+
+.estadoL3 .estado2 {
+  background: url(https://www.metro.cl/images/estadoL3_2.png) left top no-repeat transparent;
+}
+
+.estadoL4 .estado2 {
+  background: url(https://www.metro.cl/images/estadoL4_2.png) left top no-repeat transparent;
+}
+
+.estadoL4a .estado2 {
+  background: url(https://www.metro.cl/images/estadoL4a_2.png) left top no-repeat transparent;
+}
+
+.estadoL5 .estado2 {
+  background: url(https://www.metro.cl/images/estadoL5_2.png) left top no-repeat transparent;
+}
+
+.estadoL6 .estado2 {
+  background: url(https://www.metro.cl/images/estadoL6_2.png) left top no-repeat transparent;
+}
+
+/*Accesos cerrados*/
+.estadoL1 .estado3 {
+  background: url(https://www.metro.cl/images/estadoL1_4.png) left top no-repeat transparent;
+}
+
+.estadoL2 .estado3 {
+  background: url(https://www.metro.cl/images/estadoL2_4.png) left top no-repeat transparent;
+}
+
+.estadoL3 .estado3 {
+  background: url(https://www.metro.cl/images/estadoL3_4.png) left top no-repeat transparent;
+}
+
+.estadoL4 .estado3 {
+  background: url(https://www.metro.cl/images/estadoL4_4.png) left top no-repeat transparent;
+}
+
+.estadoL4a .estado3 {
+  background: url(https://www.metro.cl/images/estadoL4a_4.png) left top no-repeat transparent;
+}
+
+.estadoL5 .estado3 {
+  background: url(https://www.metro.cl/images/estadoL5_4.png) left top no-repeat transparent;
+}
+
+.estadoL6 .estado3 {
+  background: url(https://www.metro.cl/images/estadoL6_4.png) left top no-repeat transparent;
+}

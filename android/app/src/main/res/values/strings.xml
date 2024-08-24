@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">metroanalytics</string>
+    <string name="title_activity_main">metroanalytics</string>
+    <string name="package_name">ionic.metroanalytics</string>
+    <string name="custom_url_scheme">ionic.metroanalytics</string>
+</resources>

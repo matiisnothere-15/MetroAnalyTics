@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="header_login">
+      <img src="https://www.metro.cl/images/logo-2022.png?v=2022031801" alt="">
+    </div>
+  </ion-toolbar>
+  <!-- Imagen corporativa -->
+  <div class="encabezado">
+    <p class="subtitulo_login">⚪ Corporativo</p>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Estructura de la pagina de Restablecer contrasena -->
+  <form>
+    <div class="inputs">
+      <div class="subtitulo">
+        <h2 class="titulo">Recuperar cuenta</h2>
+      </div>
+      <br>
+      <ion-item color="plomo">
+        <ion-input label="Correo electronico" labelPlacement="stacked" type="email"></ion-input>
+      </ion-item>
+      <br>
+      <br>
+      <ion-item color="plomo" lines="none">
+        <ion-button class="btn_recuperar" type="submit" expand="full">Restablecer contraseña</ion-button>
+      </ion-item>
+      <br>
+      <ion-item color="plomo" lines="none">
+        <ion-button class="btn_volver" fill="clear" (click)="volverAtras()">Volver atrás</ion-button>
+      </ion-item>
+    </div>
+  </form>
+
+</ion-content>

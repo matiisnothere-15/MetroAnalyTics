@@ -1,0 +1,496 @@
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <div class="header_login">
+        <ion-icon name="home-outline" slot="start" size="large" color="light"></ion-icon>
+        <ion-title color="light">Menu</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="menu">
+      <p>
+        <a (click)="goInformeFlujoPas()" style="text-decoration: none; color: gray;">
+          Flujo de pasajeros
+        </a>
+      </p>
+      <p>
+        <a (click)="goInformeTiempo()" style="text-decoration: none; color: gray;">
+          Tiempo de traslados
+        </a>
+      </p>
+      <p>
+        <a (click)="goInformeDestino()" style="text-decoration: none; color: gray;">
+          Estaciones de destino
+        </a>
+      </p>
+      <p>
+        <a (click)="goInformeEstacionOrigen()" style="text-decoration: none; color: gray;">
+          Estaciones de origen
+        </a>
+      </p>
+      <div class="loguot">
+        <p><ion-icon name="log-out-outline" size="large"></ion-icon></p>
+        <p>
+          <a href="" style="text-decoration: none; color: rgb(203, 29, 40);">
+            Cerrar sesión
+          </a>
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <div class="header_login">
+        <img src="https://www.metro.cl/images/logo-2022.png?v=2022031801" alt="">
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenido -->
+  <ion-content class="ion-padding">
+    <div class="container_subtitulo">
+      <h2 class="subtitulo_login">⚪ Estado de la red</h2>
+    </div>
+    <!-- Simbología estados -->
+    <ion-card color="light" style="margin: 0;">
+      <ion-card-header>
+        <ion-card-title>Simbología</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div style="margin: 0;">
+          <ul class="estadoL0">
+            <li class="estado1">Estación operativa</li>
+            <li class="estado2">Estación cerrada temporalmente</li>
+            <li class="estado3">Estación con accesos cerrados</li>
+          </ul>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <br>
+    <!-- Lineas y estaciones del metro -->
+    <ion-accordion-group >
+      <div class="lineas">
+        <ion-accordion style="border-radius: 30px;" value="first">
+          <ion-item id="l1"  slot="header" color="rojo">
+            <ion-icon name="warning" color="light"></ion-icon>
+            <ion-label color="light"><strong>L1- Estaciones cerradas</strong></ion-label>
+          </ion-item>
+          <div slot="content">
+            <ul class="estadoL1" style="padding: 0;">
+              <li>
+                San Pablo
+                <strong>
+                  <img src="../../assets/L5.webp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Neptuno</li>
+              <li class="estado1">Pajaritos</li>
+              <li class="estado1">Las Rejas</li>
+              <li class="estado1">Ecuador</li>
+              <li class="estado1">San Alberto Hurtado</li>
+              <li class="estado1">Universidad de Santiago</li>
+              <li class="estado1">Estación Central</li>
+              <li class="estado1">U.L.A.</li>
+              <li class="estado1">República</li>
+              <li class="estado1">
+                Los Héroes
+                <strong>
+                  <img src="../../assets/L2.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li>  
+              <li class="estado1">La Moneda</li>
+              <li class="estado1">
+                Universidad de Chile
+                <strong>
+                  <img src="../../assets/L3.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado2">Santa Lucía</li>
+              <li class="estado2">Universidad Católica</li>
+              <li class="estado2">
+                Baquedano
+                <strong>
+                  <img src="../../assets/L5.webp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Salvador</li>
+              <li class="estado1">Manuel Montt</li>
+              <li class="estado1">Pedro de Valdivia</li>
+              <li class="estado1">
+                Los Leones
+                <strong>
+                  <img src="../../assets/L6.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">
+                Tobalaba
+                <strong>
+                  <img src="../../assets/L4.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">El Golf</li>
+              <li class="estado1">Alcántara</li>
+              <li class="estado1">Escuela Militar</li>
+              <li class="estado1">Manquehue</li>
+              <li class="estado1">Hernando de Magallanes</li>
+              <li class="estado1">Los Dominicos</li>
+            </ul>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="segundo" style="border-radius: 30px; " >
+          <ion-item slot="header" color="amarillo">
+            <ion-label color="light"><strong>L2</strong> - Línea disponible</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ul class="estadoL2" style="padding: 0;">
+              <li class="estado1">Vespucio Norte</li>
+              <li class="estado1">Zapadores</li>
+              <li class="estado1">Dorsal</li>
+              <li class="estado1">Einstein</li>
+              <li class="estado1">Cementerios</li>
+              <li class="estado1">Cerro Blanco</li>
+              <li class="estado1">Patronato</li>
+              <li class="estado1">
+                Puente Cal y Canto
+                <strong>
+                  <img src="../../assets/L3.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li>    
+              <li class="estado1">
+                Santa Ana
+                <strong>
+                  <img src="../../assets/L5.webp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li>    
+              <li class="estado1">
+                Los Héroes
+                <strong>
+                  <img src="../../assets/L1.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li>              
+              <li class="estado1">Toesca</li>
+              <li class="estado1">Parque O'Higgins</li>
+              <li class="estado1">Rondizzoni</li>
+              <li class="estado1">
+                Franklin
+                <strong>
+                  <img src="../../assets/L6.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li>    
+              <li class="estado1">El Llano</li>
+              <li class="estado1">San Miguel</li>
+              <li class="estado1">Lo Vial</li>
+              <li class="estado1">Departamental</li>
+              <li class="estado1">Ciudad del Niño</li>
+              <li class="estado1">Lo Ovalle</li>
+              <li class="estado1">El Parrón</li>
+              <li class="estado1">
+                La Cisterna
+                <strong>
+                  <img src="../../assets/L4A.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li>    
+              <li class="estado1">El Bosque</li>
+              <li class="estado1">Observatorio</li>
+              <li class="estado1">Copa Lo Martínez</li>
+              <li class="estado1">Hospital El Pino</li>
+            </ul>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="tercero" style="border-radius: 30px; " >
+          <ion-item slot="header" color="cafe">
+            <ion-label color="light"><strong>L3</strong> - Linea disponible</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ul class="estadoL3" style="padding: 0;">
+              <li class="estado1">Plaza Quilicura</li>
+              <li class="estado1">Lo Cruzat</li>
+              <li class="estado1">Ferrocarril</li>
+              <li class="estado1">Los Libertadores</li>
+              <li class="estado1">Cardenal Caro</li>
+              <li class="estado1">Vivaceta</li>
+              <li class="estado1">Conchalí</li>
+              <li class="estado1">Plaza Chacabuco</li>
+              <li class="estado1">Hospitales</li>
+              <li class="estado1">
+                Puente Cal y Canto
+                <strong>
+                  <img src="../../assets/L2.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">
+                Plaza de Armas
+                <strong>
+                  <img src="../../assets/L5.webp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">
+                Universidad de Chile
+                <strong>
+                  <img src="../../assets/L1.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Parque Almagro</li>
+              <li class="estado1">Matta</li>
+              <li class="estado1">
+                Irarrazabal
+                <strong>
+                  <img src="../../assets/L5.webp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Monseñor Eyzaguirre</li>
+              <li class="estado1">
+                Nuñoa
+                <strong>
+                  <img src="../../assets/L6.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Chile España</li>
+              <li class="estado1">Villa Frei</li>
+              <li class="estado1">
+                Plaza Egaña
+                <strong>
+                  <img src="../../assets/L4.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                </strong>
+              </li> 
+              <li class="estado1">Fernando Castillo Velasco</li>
+            </ul>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="cuarto" style="border-radius: 30px; " >
+          <ion-item slot="header" color="azul">
+            <ion-icon name="warning" color="light"></ion-icon>
+            <ion-label color="light"><strong>L4 - Estaciones cerradas</strong></ion-label>
+          </ion-item>
+          <div slot="content">
+            <ul class="estadoL4" style="padding: 0;">
+              <li class="estado1">
+                Tobalaba
+                <strong>
+                  <img src="../../assets/L1.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Cristóbal Colón</li>
+              <li class="estado1">Francisco Bilbao</li>
+              <li class="estado1">Príncipe de Gales</li>
+              <li class="estado1">Simón Bolivar</li>
+              <li class="estado1">
+                Plaza Egaña
+                <strong>
+                  <img src="../../assets/L3.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Los Orientales</li>
+              <li class="estado1">Grecia</li>
+              <li class="estado1">Los Presidentes</li>
+              <li class="estado1">Quilin</li>
+              <li class="estado1">Las Torres</li>
+              <li class="estado1">Macul</li>
+              <li class="estado1">
+                Vicuña Mackenna
+                <strong>
+                  <img src="../../assets/L4A.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">
+                Vicente Valdes
+                <strong>
+                  <img src="../../assets/L5.webp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Rojas Magallanes</li>
+              <li class="estado1">Trinidad</li>
+              <li class="estado1">San José de la Estrella</li>
+              <li class="estado1">Los Quillayes</li>
+              <li class="estado1">Elisa Correa</li>
+              <li class="estado1">Hospital Sótero del Río</li>
+              <li class="estado2">Protectora de la Infancia</li>
+              <li class="estado1">Las Mercedes</li>
+              <li class="estado1">Plaza de Puente Alto</li>
+            </ul>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="cuartoA" style="border-radius: 30px; " >
+          <ion-item slot="header" color="celeste">
+            <ion-label color="light"><strong>L4A</strong> - Línea disponible</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ul class="estadoL4a" style="padding: 0;">
+              <li class="estado1">
+                Vicuña Mackenna
+                <strong>
+                  <img src="../../assets/L4.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Santa Julia</li>
+              <li class="estado1">La Granja</li>
+              <li class="estado1">Santa Rosa</li>
+              <li class="estado1">San Ramón</li>
+              <li class="estado1">
+                La Cisterna
+                <strong>
+                  <img src="../../assets/L2.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+            </ul>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="quinto" style="border-radius: 30px; " >
+          <ion-item slot="header" color="verde">
+            <ion-icon name="warning" color="light"></ion-icon>
+            <ion-label color="light"><strong>L5 - Estaciones cerradas</strong></ion-label>
+          </ion-item>
+          <div slot="content">
+            <ul class="estadoL5" style="padding: 0;">
+              <li class="estado1">Plaza de Maipú</li>
+              <li class="estado1">Santiago Bueras</li>
+              <li class="estado1">Del Sol</li>
+              <li class="estado1">Monte Tabor</li>
+              <li class="estado1">Las Parcelas</li>
+              <li class="estado1">Laguna Sur</li>
+              <li class="estado1">Barrancas</li>
+              <li class="estado1">Pudahuel</li>
+              <li class="estado1">
+                San Pablo
+                <strong>
+                  <img src="../../assets/L1.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Lo Prado</li>
+              <li class="estado1">Blanqueado</li>
+              <li class="estado1">Gruta de Lourdes</li>
+              <li class="estado1">Quinta Normal</li>
+              <li class="estado1">Cumming</li>
+              <li class="estado1">
+                Sanata Ana
+                <strong>
+                  <img src="../../assets/L2.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">
+                Plaza de Armas
+                <strong>
+                  <img src="../../assets/L3.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Bellas Artes</li>
+              <li class="estado2">
+                Baquedano
+                <strong>
+                  <img src="../../assets/L1.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Parque Bustamante</li>
+              <li class="estado1">Santa Isabel</li>
+              <li class="estado1">
+                Irarrazabal
+                <strong>
+                  <img src="../../assets/L3.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                </strong>
+              </li> 
+              <li class="estado1">
+                Ñuble
+                <strong>
+                  <img src="../../assets/L6.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Rodrigo de Araya</li>
+              <li class="estado1">Carlos Valdovinos</li>
+              <li class="estado1">Camino Agrícola</li>
+              <li class="estado1">San Joaquín</li>
+              <li class="estado1">Pedrero</li>
+              <li class="estado1">Mirador</li>
+              <li class="estado1">Bellavista de La Florida</li>
+              <li class="estado1">
+                Vicente Valdes
+                <strong>
+                  <img src="../../assets/L4.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+            </ul>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="sexto" style="border-radius: 30px; " >
+          <ion-item slot="header" color="morado">
+            <ion-label color="light"><strong>L6</strong> - Línea disponible</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ul class="estadoL6" style="padding: 0;">
+              <li class="estado1">Cerrillos</li>
+              <li class="estado1">Lo Valledor</li>
+              <li class="estado1">Pdte. Pedro Aguirre Cerda</li>
+              <li class="estado1">
+                Franklin
+                <strong>
+                  <img src="../../assets/L2.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Bío Bío</li>
+              <li class="estado1">
+                Ñuble
+                <strong>
+                  <img src="../../assets/L5.webp" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Estadio Nacional</li>
+              <li class="estado1">
+                Nuñoa
+                <strong>
+                  <img src="../../assets/L3.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+              <li class="estado1">Inés de Suárez</li>
+              <li class="estado1">
+                Los Leones
+                <strong>
+                  <img src="../../assets/L1.png" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-bottom: 3px;" alt="">
+                  
+                </strong>
+              </li> 
+            </ul>
+          </div>
+        </ion-accordion>
+      </div>
+    </ion-accordion-group>
+  </ion-content>
+</div>

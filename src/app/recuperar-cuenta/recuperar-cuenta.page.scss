@@ -1,0 +1,58 @@
+.header_login {
+    background-color: rgb(203, 29, 40);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+.header {
+    background-color: #ffffff;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-content {
+    --background: #fff; /* Fondo blanco (#fff) */
+}
+  
+.subtitulo {
+    text-align: center;
+}
+
+.titulo {
+    font-family: "GothamMedium" ,Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: black;
+    flex-direction: column;
+    font-size: 25px;
+    align-self: center;
+}
+
+.inputs {
+    padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_recuperar {
+    --background: rgb(222,36,49,.9);
+    --color: white;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    width: 100%;
+}
+
+.btn_volver {
+    width: 100%;
+    text-decoration: underline;
+    color: dimgrey;
+}
+
+#restablecerCargando {
+    display: none;
+}

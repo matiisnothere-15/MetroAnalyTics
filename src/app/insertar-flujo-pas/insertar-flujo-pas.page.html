@@ -1,0 +1,46 @@
+<!-- barra inicio -->
+<ion-header>
+  <ion-toolbar>
+    <div class="header">
+      <img src="https://www.metro.cl/images/logo-2022.png?v=2022031801" alt="">
+      <ion-buttons slot="start">
+        <ion-button fill="clear" (click)="volverFlujoPas()"><ion-icon style="width: 50px; height: 30px; color: white;"
+            name="arrow-back-outline"></ion-icon></ion-button>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div>
+    <!-- Contenido -->
+    <!-- Estructura de la pagina de Login -->
+    <form (ngSubmit)="guardarFlujoPas()">
+      <div class="inputs">
+        <h1 class="textLogin">Insertar flujo pasajeros</h1><br>
+        
+          <ion-item color="plomo">
+            <ion-input labelPlacement="stacked" type="number" [(ngModel)]="conteo" name="conteo">
+              <div slot="label">Conteo <ion-text color="danger" id="errorUser"></ion-text></div>
+            </ion-input>
+          </ion-item>
+          <br><br>
+          <ion-item color="plomo">
+            <ion-input labelPlacement="stacked" type="email" color="tertiary" [(ngModel)]="linea" name="linea">
+              <div slot="label">Linea <ion-text color="danger" id="errorPass"></ion-text></div>
+            </ion-input>
+          </ion-item>
+          <br><br>
+          <ion-item color="plomo">
+            <ion-input labelPlacement="stacked" color="tertiary" [(ngModel)]="nombreEstacion" name="nombreEstacion">
+              <div slot="label">Nombre estación<ion-text color="danger" id="errorPass"></ion-text></div>
+            </ion-input>
+          </ion-item>
+          <br>
+          <ion-item color="plomo" lines="none">
+            <ion-button class="btn_ingresar" type="submit" fill="clear">Agregar</ion-button>
+          </ion-item>
+      </div>
+    </form>
+  </div>
+
+</ion-content>

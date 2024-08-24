@@ -1,0 +1,50 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <div class="header">
+        <img src="https://www.metro.cl/images/logo-2022.png?v=2022031801" alt="">
+      </div>
+    </ion-toolbar>
+    <!-- Imagen corporativa -->
+    <div class="encabezado">
+      <p class="subtitulo_login">⚪ Corporativo</p>
+    </div>
+  </ion-header>
+
+  <div>
+    <!-- Contenido -->
+    <!-- Estructura de la pagina de Login -->
+    <form (ngSubmit)="redirigirHome()">
+      <div class="inputs">
+        <h1 class="textLogin">Registro</h1><br>
+        
+          <ion-item color="plomo">
+            <ion-input labelPlacement="stacked">
+              <div slot="label">Nombre <ion-text color="danger" id="errorUser"></ion-text></div>
+            </ion-input>
+          </ion-item>
+          <br><br>
+          <ion-item color="plomo">
+            <ion-input labelPlacement="stacked" type="email" color="tertiary">
+              <div slot="label">Correo electronico <ion-text color="danger" id="errorPass"></ion-text></div>
+            </ion-input>
+          </ion-item>
+          <br><br>
+          <ion-item color="plomo">
+            <ion-input labelPlacement="stacked" type="password" color="tertiary">
+              <div slot="label">Nueva contraseña<ion-text color="danger" id="errorPass"></ion-text></div>
+            </ion-input>
+          </ion-item>
+          <br>
+          <ion-item color="plomo" lines="none">
+            <ion-button class="btn_ingresar" fill="clear">Registrar</ion-button>
+          </ion-item>
+          <br>
+          <ion-item color="plomo" lines="none">
+            <ion-button class="btn_recuperar" (click)="volverLogin()" fill="clear">Volver al login</ion-button>
+          </ion-item>
+      </div>
+    </form>
+  </div>
+
+</ion-content>

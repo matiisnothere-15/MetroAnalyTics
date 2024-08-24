@@ -1,0 +1,7 @@
+{
+  "name": "metroanalytics",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
